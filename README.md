@@ -4,7 +4,8 @@
 ![C#](https://img.shields.io/badge/C%23-12-239120?logo=csharp&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css&logoColor=white)
+![Github Copilot](https://img.shields.io/badge/Github_Copilot-000000?logo=githubcopilot&logoColor=white)
 
 ## 📋 Sobre o Projeto
 
@@ -300,14 +301,7 @@ Quando a aplicação está em modo de desenvolvimento, o Swagger UI está dispon
 ### Configuração do Swagger
 
 ```csharp
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo 
-    { 
-        Title = "Card API", 
-        Version = "v1" 
-    });
-});
+builder.Services.AddSwaggerGen();
 ```
 
 ### Exemplo de Uso via Swagger
@@ -385,19 +379,22 @@ app.MapFallbackToFile("index.html");
 
 ## 🛠️ Ferramentas de Desenvolvimento
 
-### Visual Studio 2022
+### JetBrains Rider
 
 - **Depuração**: Breakpoints no C# e debugging JavaScript
-- **IntelliSense**: Autocompletar para C#, JavaScript, HTML e CSS
-- **Integração**: Executar testes diretamente no IDE
+- **IntelliSense**: Autocompletar avançado para C#, JavaScript, HTML e CSS
+- **Integração**: Executar testes diretamente no IDE com excelente suporte ao xUnit
+- **Refactoring**: Ferramentas poderosas de refatoração de código
+- **Git Integration**: Controle de versão integrado
 
-### VS Code
+### VS Code (Frontend)
 
-- **Extensões Recomendadas**:
-  - C# Dev Kit
-  - REST Client
+- **Extensões Recomendadas para Frontend**:
   - Live Server
+  - REST Client
   - Swagger Viewer
+  - HTML CSS Support
+  - JavaScript (ES6) code snippets
 
 ### Comandos Úteis
 
@@ -464,13 +461,7 @@ dotnet test --filter "IdentifyBrand"
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido como parte do Bootcamp Microsoft Copilot para fins educacionais.
-
----
-
-## 📞 Suporte
-
-Para dúvidas ou sugestões, abra uma issue no repositório ou entre em contato através do bootcamp.
+Este projeto foi desenvolvido como parte do Bootcamp Microsoft Copilot para fins educacionais. Foi utilizado o Copilot para auxiliar no desenvolvimento. Sinta-se à vontade para usar como referência ou inspiração.
 
 ---
 
