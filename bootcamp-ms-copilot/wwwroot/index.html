@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Cartão de Crédito</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card-validator">
+            <div class="header">
+                <i class="fas fa-credit-card"></i>
+                <h1>Validador de Cartão de Crédito</h1>
+                <p>Digite o número do seu cartão para identificar a bandeira</p>
+            </div>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="cardNumber">Número do Cartão</label>
+                    <input 
+                        type="text" 
+                        id="cardNumber" 
+                        placeholder="Digite o número do cartão"
+                        maxlength="19"
+                        autocomplete="off"
+                    >
+                    <span class="input-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="result-section">
+                <div class="card-brand-display">
+                    <div class="brand-icon" id="brandIcon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="brand-info">
+                        <span class="brand-label">Bandeira:</span>
+                        <span class="brand-name" id="brandName">Digite um número de cartão</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="examples">
+                <h3>Exemplos de números de teste:</h3>
+                <div class="example-cards">
+                    <div class="example-card" data-number="4111111111111111">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Visa</span>
+                    </div>
+                    <div class="example-card" data-number="5555555555554444">
+                        <i class="fab fa-cc-mastercard"></i>
+                        <span>MasterCard</span>
+                    </div>
+                    <div class="example-card" data-number="378282246310005">
+                        <i class="fab fa-cc-amex"></i>
+                        <span>American Express</span>
+                    </div>
+                    <div class="example-card" data-number="6011111111111117">
+                        <i class="fab fa-cc-discover"></i>
+                        <span>Discover</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
