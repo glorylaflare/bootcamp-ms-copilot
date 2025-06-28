@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.card-validator {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header i {
+    font-size: 3rem;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    margin-top: 13px;
+}
+
+.result-section {
+    margin-bottom: 40px;
+}
+
+.card-brand-display {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.brand-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #999;
+    border: 2px solid #e1e5e9;
+    transition: all 0.3s ease;
+}
+
+.brand-info {
+    flex: 1;
+}
+
+.brand-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.brand-name {
+    display: block;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.examples {
+    margin-top: 30px;
+}
+
+.examples h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.example-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.example-card {
+    background: #f8f9fa;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.example-card:hover {
+    background: #e9ecef;
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.example-card i {
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+/* Estilos específicos para diferentes bandeiras */
+.brand-visa {
+    color: #1a1f71 !important;
+    border-color: #1a1f71 !important;
+}
+
+.brand-mastercard {
+    color: #eb001b !important;
+    border-color: #eb001b !important;
+}
+
+.brand-amex {
+    color: #006fcf !important;
+    border-color: #006fcf !important;
+}
+
+.brand-discover {
+    color: #ff6000 !important;
+    border-color: #ff6000 !important;
+}
+
+.brand-elo {
+    color: #ffcb05 !important;
+    border-color: #ffcb05 !important;
+}
+
+.brand-hipercard {
+    color: #cc092f !important;
+    border-color: #cc092f !important;
+}
+
+.brand-unknown {
+    color: #999 !important;
+    border-color: #e1e5e9 !important;
+}
+
+.card-brand-display.identified {
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .card-validator {
+        padding: 30px 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .example-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-brand-display {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
